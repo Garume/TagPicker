@@ -8,13 +8,14 @@
     "build:chrome": "ts-node -T build.ts --chrome",
     "run:firefox": "web-ext run -s dist-firefox",
     "run:chrome": "web-ext run -s dist-chrome -t chromium",
-    "dev:chrome":"yarn build && yarn run:chrome",
+    "dev:chrome": "yarn build && yarn run:chrome",
     "package:firefox": "web-ext build -s dist-firefox --overwrite-dest",
     "lint": "eslint --max-warnings=0 . && prettier --check .",
     "lint:fix": "eslint --fix . && prettier --write .",
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@emotion/react": "^11.10.4",
     "antd": "^4.23.5",
     "esbuild": "^0.15.10",

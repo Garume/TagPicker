@@ -12,7 +12,15 @@ const DanbooruTags: VFC<Props> = ({ url }) => {
   }
 
   // eslint-disable-next-line react/react-in-jsx-scope
-  return <div>{regex(url) ? <div>Go to Post (Image)</div> : <TagsList />}</div>
+  return (
+    <div>
+      {regex(url) ? (
+        <TagsList />
+      ) : (
+        <div>Go to Post Page in Danbooru (Image)</div>
+      )}
+    </div>
+  )
 }
 
 export default DanbooruTags

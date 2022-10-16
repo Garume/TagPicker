@@ -21,7 +21,14 @@ const Tags2table: React.VFC<Props> = ({ tags }) => {
             <QuestionCircleOutlined
               onClick={() => handleClick(tag.wiki_link!)}
             />
-            <p css={textStyle}>{tag.tag}</p>
+            <p
+              css={textStyle}
+              onClick={() => {
+                handleClick(tag.tag_link!)
+              }}
+            >
+              {tag.tag}
+            </p>
             <p css={textStyle}>{tag.count}</p>
           </div>
         )

@@ -1,3 +1,4 @@
+import { Divider } from 'antd'
 import React, { VFC } from 'react'
 import TagsList from './tagsList'
 
@@ -13,13 +14,16 @@ const DanbooruTags: VFC<Props> = ({ url }) => {
 
   // eslint-disable-next-line react/react-in-jsx-scope
   return (
-    <div>
-      {regex(url) ? (
-        <TagsList />
-      ) : (
-        <div>Go to Post Page in Danbooru (Image)</div>
-      )}
-    </div>
+    <>
+      <Divider />
+      <div>
+        {regex(url) ? (
+          <TagsList />
+        ) : (
+          <div>Go to Post Page in Danbooru (Image)</div>
+        )}
+      </div>
+    </>
   )
 }
 

@@ -2,12 +2,15 @@ import { css } from '@emotion/react'
 import { Button } from 'antd'
 import React, { FC, useState } from 'react'
 import { tagToPromt, getAllTags } from './tags'
+import browser from 'webextension-polyfill'
 
 const App: FC = () => {
   const [copyText, setCopyText] = useState<string>('Copy Tags!!')
 
-  const handleCopyTags = () => {
-    const promt = tagToPromt(getAllTags(), ['General'])
+  const handleCopyTags = async () => {
+    const category = await browser.storage.local.get('category')
+
+    const promt = tagToPromt(getAllTags(), category.category)
     if (navigator.clipboard) {
       navigator.clipboard.writeText(promt)
       setCopyText('Copied!!')

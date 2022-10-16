@@ -3,6 +3,8 @@ import { css } from '@emotion/react'
 import { Button } from 'antd'
 import React, { useEffect, useState } from 'react'
 import browser from 'webextension-polyfill'
+import { TagType } from '../contents/type'
+import CategoryCheckBox from './categoryCheckBox'
 import DanbooruTags from './danbooruTags'
 
 export const Popup: React.VFC = () => {
@@ -35,6 +37,7 @@ export const Popup: React.VFC = () => {
       <Button css={ButtonStyle} onClick={handleClick}>
         Go TO Danbooru
       </Button>
+      <CategoryCheckBox />
       <div>
         <p>Now URL: {loading ? currentUrl : <LoadingOutlined />}</p>
         {currentUrl ? <DanbooruTags url={currentUrl} /> : <p>No Found</p>}

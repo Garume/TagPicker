@@ -16,8 +16,6 @@ tagListNodes?.prepend(app)
 const container = document.getElementById('react-root')
 const root = createRoot(container!)
 
-console.log(getAllTags())
-
 // no use
 browser.runtime.sendMessage({
   values: {

@@ -12,7 +12,6 @@ const DanbooruTags: VFC<Props> = ({ url }) => {
     return !!url.match(danbooruUrlPattren)
   }
 
-  // eslint-disable-next-line react/react-in-jsx-scope
   return (
     <>
       <Divider />

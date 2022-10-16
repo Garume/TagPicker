@@ -1,6 +1,5 @@
 import { Checkbox } from 'antd'
 import { FC, useEffect, useState } from 'react'
-import { TagType } from '../contents/type'
 import React from 'react'
 import { CheckboxValueType } from 'antd/lib/checkbox/Group'
 import browser from 'webextension-polyfill'

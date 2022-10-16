@@ -3,7 +3,6 @@ import { css } from '@emotion/react'
 import { Button } from 'antd'
 import React, { useEffect, useState } from 'react'
 import browser from 'webextension-polyfill'
-import { TagType } from '../contents/type'
 import CategoryCheckBox from './categoryCheckBox'
 import DanbooruTags from './danbooruTags'
 

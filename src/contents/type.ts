@@ -23,3 +23,9 @@ export const initialTag = (type: TagType): Tag => {
     type: type,
   }
 }
+
+export interface MessageType {
+  values: {
+    tags: Tag[]
+  }
+}

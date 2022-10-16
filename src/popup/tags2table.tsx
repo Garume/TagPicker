@@ -1,4 +1,4 @@
-import { Tag } from '../contents/type'
+import { Tag, TagType } from '../contents/type'
 import React from 'react'
 import { QuestionCircleOutlined } from '@ant-design/icons'
 import browser from 'webextension-polyfill'
@@ -6,16 +6,19 @@ import { css } from '@emotion/react'
 
 interface Props {
   tags: Tag[]
+  category: TagType[]
 }
 
-const Tags2table: React.VFC<Props> = ({ tags }) => {
+const Tags2table: React.VFC<Props> = ({ tags, category }) => {
   const handleClick = (href: string) => {
     browser.tabs.create({ url: href })
   }
 
+  const filteredTags = tags.filter((tag) => category.includes(tag.type))
+
   return (
     <div css={boxStyle}>
-      {tags.map((tag: Tag, index: number) => {
+      {filteredTags.map((tag: Tag, index: number) => {
         return (
           <div key={index} css={rowStyle}>
             <QuestionCircleOutlined

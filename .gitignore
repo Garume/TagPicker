@@ -138,3 +138,6 @@ dist
 /web-ext-artifacts
 /dist-firefox
 /dist-chrome
+
+*.crx
+*.pem

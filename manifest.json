@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "TagPicker for danbooru",
   "version": "1.0",
-  "description": "Get  some tags from Danbooru in a form that is read by promt.",
+  "description": "Get some tags from Danbooru in a form that is read by promt.",
   "icons": {
     "16": "src/icons/icon-16.png",
     "32": "src/icons/icon-32.png"
